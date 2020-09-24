@@ -11,15 +11,15 @@ CREATE TABLE hotels (
     id INT PRIMARY KEY AUTO_INCREMENT,
     reviewsNum INT NOT NULL ,
     rate Double precision NOT NULL , 
-    id-reviews INT NOT NULL REFERENCES review (id)
-)
+    id_reviews INT NOT NULL REFERENCES review (id)
+);
 
 
 CREATE TABLE review (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    visitorName VARCHAR NOT NULL ,
-    avatar URL NOT NULL ,
-    revieDate date NOT NUL,
-)
+    visitorName VARCHAR(50) NOT NULL ,
+    avatar TEXT  NOT NULL ,
+    col TIMESTAMP NOT NULL
+);
 
 
