@@ -30,8 +30,9 @@ const review1 = faker.lorem.paragraph()
 const col1 = faker.date.month() + ' ' + faker.random.number({min: 2017 , max : 2020});
 // console.log(col1)
 
-const q = `INSERT INTO review ( reviewsNum , rate ,visitorName , avatar, review , col) VALUES ( ${n},${rate1},'${visitorName1}' ,'${avatar1}','${review1}','${col1}')`
-connection.query(q , (err , data) => {
+const q = `INSERT INTO review ( reviewsNum , rate ,visitorName , avatar, review , col) VALUES ( ?,?,?,?,?,?)`
+const params = [n , rate1 , visitorName1, avatar1, review1, col1];
+connection.query(q ,params, (err , data) => {
     if (err) {
         console.log(err)
     } else {
@@ -42,7 +43,7 @@ connection.query(q , (err , data) => {
 
 
 }
-    // seed();
+  // seed();
 
 // const getAllReviwes = (callback) => {
 
