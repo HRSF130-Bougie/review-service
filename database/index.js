@@ -48,7 +48,7 @@ connection.query(q ,params, (err , data) => {
 // const getAllReviwes = (callback) => {
 
     
-//     console.log(seed())
+//     console.log(seed())gi
 //     const q = `SELECT * FROM review`;
 //     connection.query(q , (err, data) => {
 //         if(err) {
