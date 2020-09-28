@@ -1,34 +1,43 @@
-const express = require('express')
-const app = express()
-const port = 3000
-const db = require('../database')
-const bodyParser = require ('body-parser');
+const express = require('express');
+
+const app = express();
+const port = 3000;
 const path = require('path');
 
+const bodyParser = require('body-parser');
 
-app.use(bodyParser .json());
-app.use(bodyParser .urlencoded({extended: true}));
+const db = require('../database');
 
-app.use('/', express.static(path.join(__dirname, '../client/dist')))
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use('/', express.static(path.join(__dirname, '../client/dist')));
+
+app.get('/api/hotels', (req, res) => {
+  const q = 'SELECT * FROM hotels';
+  db.seed();
+  db.connection.query(q, (err, data) => {
+    if (err) {
+      res.status(400).send();
+    } else {
+      res.status(200).send(data);
+    }
+  });
+});
 
 app.get('/api/review', (req, res) => {
-       //console.log(db)
-    //db.connection.query(`DELETE FROM review`);
-    const q = `SELECT * FROM review`;
-    db.seed();
-    db.connection.query(q, (err , data) => {
-        if (err) {
-            console.log('ERRR' , err)
-            res.status(400).send()
-        } else {
-            res.status(200).send(data)
-        }
-    } )
-
-})
-
+  const q = 'SELECT * FROM review';
+  db.seed();
+  db.connection.query(q, (err, data) => {
+    if (err) {
+      res.status(400).send();
+    } else {
+      res.status(200).send(data);
+    }
+});
+});
 
 app.listen(port, () => {
-console.log(`Example app listening at http://localhost:${port}`)
+  // eslint-disable-next-line no-console
+  console.log(`Example app listening at http://localhost:${port}`);
 });
