@@ -1,24 +1,19 @@
 import React from 'react';
 
-const Header = (props) => {
+const Header = ({values}) => {
+  let rate = '';
+  let reviewNum = 0;
+  values.map((one) => {
+    rate = one.rate;
+    reviewNum = one.reviewsNum;
+});
 
-    //console.log('reee' , props.values.rate)
-    
-    // const rate = props.values[0];
-    // const rate1 = rate.rate;
-    // console.log('reate' ,rate1)
-
-return (
+  return (
     <div>
-    <span></span>
-    <span> </span>
-    
+      <span>&#11088;</span>
+      <span>{rate}</span>
+      <span> ({reviewNum} Reviews)</span>
     </div>
-)
-}
-
-
-
-
+)}
 
 export default Header;

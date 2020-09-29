@@ -13,8 +13,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/', express.static(path.join(__dirname, '../client/dist')));
 
-app.get('/api/hotels', (req, res) => {
-  const q = 'SELECT * FROM hotels';
+app.get('/api/reviews', (req, res) => {
+  const q = 'SELECT * FROM hotels INNER JOIN review';
   db.seed();
   db.connection.query(q, (err, data) => {
     if (err) {
@@ -25,17 +25,17 @@ app.get('/api/hotels', (req, res) => {
   });
 });
 
-app.get('/api/review', (req, res) => {
-  const q = 'SELECT * FROM review';
-  db.seed();
-  db.connection.query(q, (err, data) => {
-    if (err) {
-      res.status(400).send();
-    } else {
-      res.status(200).send(data);
-    }
-});
-});
+// // app.get('/api/review', (req, res) => {
+// //   const q = 'SELECT * FROM review';
+// //   db.seed();
+// //   db.connection.query(q, (err, data) => {
+// //     if (err) {
+// //       res.status(400).send();
+// //     } else {
+// //       res.status(200).send(data);
+// //     }
+// // });
+// });
 
 app.listen(port, () => {
   // eslint-disable-next-line no-console

@@ -10,15 +10,15 @@ class App extends React.Component {
     this.state = {
       reviews: [],
     };
-    this.getAll = this.getAll.bind(this);
+    this.getAllReviews = this.getAllReviews.bind(this);
   }
 
   componentDidMount() {
-    this.getAll();
+    this.getAllReviews();
   }
 
-  getAll() {
-    fetch('/api/review')
+  getAllReviews() {
+    fetch('/api/reviews')
       .then((res) => res.json())
       .then((result) => this.setState({
         reviews: result,
