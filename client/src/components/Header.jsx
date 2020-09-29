@@ -1,24 +1,22 @@
 import React from 'react';
+//import styled from'jest-styled-components'
 
-const Header = (props) => {
 
-    //console.log('reee' , props.values.rate)
-    
-    // const rate = props.values[0];
-    // const rate1 = rate.rate;
-    // console.log('reate' ,rate1)
+const Header = ({values}) => {
+  let rate = '';
+  let reviewNum = 0;
+  values.map((one) => {
+    rate = one.rate;
+    reviewNum = one.reviewsNum;
+});
 
-return (
+  return (
     <div>
-    <span></span>
-    <span> </span>
-    
+      <span> </span>
+      <span>{rate}</span>
+      <span> ({reviewNum} Reviews) </span>
     </div>
 )
 }
-
-
-
-
 
 export default Header;

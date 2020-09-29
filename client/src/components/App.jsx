@@ -18,7 +18,7 @@ class App extends React.Component {
   }
 
   getAll() {
-    fetch('/api/review')
+    fetch('/api/reviews')
       .then((res) => res.json())
       .then((result) => this.setState({
         reviews: result,
