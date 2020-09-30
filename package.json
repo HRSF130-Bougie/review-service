@@ -22,6 +22,7 @@
   "homepage": "https://github.com/HRSF130-Bougie/review-service#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "eslint": "^7.10.0",
     "express": "^4.17.1",
     "faker": "^5.1.0",
     "jest": "^26.4.2",
@@ -43,12 +44,6 @@
     "babel-loader": "^8.1.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
-    "eslint": "^7.10.0",
-    "eslint-config-airbnb": "^18.2.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-react": "^7.21.2",
-    "eslint-plugin-react-hooks": "^4.1.2",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
   }

@@ -1,6 +1,10 @@
 const mysql = require('mysql');
+
 // const faker = require('faker');
 const faker = require('faker/locale/en');
+//const faker = require('faker');
+//faker.locale = "en_CA";
+
 
 const connection = mysql.createConnection({
   user: 'root',
@@ -35,9 +39,18 @@ const seed = () => {
     });
   }
   const n = Math.floor(Math.random() * 40) + 1;
+  const rate1 = (Math.random() * (5.0 - 2.0) + 2.0).toFixed(2);
+  const rate2 = (Math.random() * (5.0 - 2.0) + 2.0).toFixed(1);
+  const rate3 = (Math.random() * (5.0 - 2.0) + 2.0).toFixed(1);
+  const rate4 = (Math.random() * (5.0 - 2.0) + 2.0).toFixed(1);
+  const rate5 = (Math.random() * (5.0 - 2.0) + 2.0).toFixed(1);
+  const rate6 = (Math.random() * (5.0 - 2.0) + 2.0).toFixed(1);
+  const rate7 = (Math.random() * (5.0 - 2.0) + 2.0).toFixed(1);
+  const n = Math.floor(Math.random() * 9) + 1;
+
+
   for (let i = 1; i <= n; i += 1) {
     const visitorName1 = faker.name.findName();
-
     // eslint-disable-next-line no-console
     console.log(visitorName1);
     const avatar1 = faker.image.avatar(); // console.log('AVATAR' ,avatar1);
@@ -59,6 +72,18 @@ const seed = () => {
       }
     });
   }
+
+  const q1 = 'INSERT INTO hotels ( rate, reviewsNum, cleanRate,  commRate, checkinRate, acuurRate, locRate, valueRate) VALUES (?,?,?,?,?,?,?,?)';
+  const param = [rate1, n, rate2, rate3, rate4, rate5, rate6, rate7];
+  connection.query(q1, param, (err, data) => {
+    if (err) {
+      // eslint-disable-next-line no-console
+      console.log(err);
+    } else {
+      // eslint-disable-next-line no-console
+      console.log(data);
+    }
+  });
 };
 
 module.exports = { seed, connection };

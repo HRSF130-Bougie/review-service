@@ -24,7 +24,10 @@ CREATE TABLE hotels (
     checkinRate Double precision NOT NULL ,
     acuurRate Double precision NOT NULL ,
     locRate Double precision NOT NULL ,
-    valueRate Double precision NOT NULL 
-    
+    valueRate Double precision NOT NULL,
+
+    valueRate Double precision NOT NULL ,
+    reviews INT references review(ID) 
+
 
 );
