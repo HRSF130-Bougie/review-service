@@ -10,3 +10,13 @@ describe('<App/>', () => {
     
   });
 });
+<<<<<<< HEAD
+=======
+
+
+// it('App has div with rating name', () => {
+//   const component = mount(<App />);
+//   expect(component.find('.rating')).toHaveClassName('rating');
+// });
+//
+>>>>>>> 49d1588f842814e5334b5797290a2777ce7ef8ca
