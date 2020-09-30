@@ -46,8 +46,6 @@ const seed = () => {
   const rate5 = (Math.random() * (5.0 - 2.0) + 2.0).toFixed(1);
   const rate6 = (Math.random() * (5.0 - 2.0) + 2.0).toFixed(1);
   const rate7 = (Math.random() * (5.0 - 2.0) + 2.0).toFixed(1);
-  const n = Math.floor(Math.random() * 9) + 1;
-
 
   for (let i = 1; i <= n; i += 1) {
     const visitorName1 = faker.name.findName();
