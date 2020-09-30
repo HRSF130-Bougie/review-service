@@ -3,6 +3,8 @@
 import React from 'react';
 import Header from './Header.jsx';
 import ListReview from './ListReview.jsx';
+import styled from 'styled-components';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -28,13 +30,25 @@ class App extends React.Component {
   }
 
   render() {
+    const Body = styled.section`
+    display : flex; 
+    justify-content: space-between; 
+    flex-direction:column ; 
+    width : 1919px;
+    hight : 912px;
+    font-family :-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+    font-size: 16px ;
+    padding-left:24px;
+    padding-right:24px;
+    `;
+
     return (
-      <div>
+      <Body>
         <Header values={this.state.reviews} />
         <div className="rating" />
         <ListReview values={this.state.reviews} />
         <div className="showMore" />
-      </div>
+      </Body>
 
     );
   }

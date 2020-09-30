@@ -1,22 +1,36 @@
 import React from 'react';
-//import styled from'jest-styled-components'
+import styled from 'styled-components';
 
-
-const Header = ({values}) => {
+const Header = (props) => {
   let rate = '';
-  let reviewNum = 0;
-  values.map((one) => {
+
+  props.values.forEach((one) => {
     rate = one.rate;
-    reviewNum = one.reviewsNum;
 });
 
+  const Wrapper = styled.section`
+  display:inline-flex;
+  font-size: 22px ;
+  font-weight : 600;
+  line-height:26px;
+  text-size-adjust:100%;
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:32px;
+  padding-top:32px;
+
+    `;
+
+  const Star = styled.span`
+      color : rgb(146, 23, 77);
+      margin-right:8px;
+    `;
+
   return (
-    <div>
-      <span> </span>
-      <span>{rate}</span>
-      <span> ({reviewNum} Reviews) </span>
-    </div>
-)
-}
+    <Wrapper>
+      <Star>⭑</Star>
+      <span id="rate">{rate}</span>
+      <span> ({props.values.length} reviews) </span>
+    </Wrapper>
+)};
 
 export default Header;
