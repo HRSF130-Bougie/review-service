@@ -80,7 +80,7 @@ const Font = styled.div`
     font-size: 16px ;
     line-height: 20px;
   `;
-const Rating = (props) => {
+const Rating = ({values}) => {
   let cleanliness = '';
   let communication = '';
   let checkIn = '';
@@ -88,7 +88,7 @@ const Rating = (props) => {
   let location = '';
   let value = '';
 
-  props.values.forEach((item) => {
+    values.forEach((item) => {
     cleanliness = item.cleanRate;
     communication = item.commRate;
     checkIn = item.checkinRate;

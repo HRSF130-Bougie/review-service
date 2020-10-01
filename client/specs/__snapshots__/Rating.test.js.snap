@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`My compnent it works 1`] = `
+<div>
+  <section
+    className="sc-gtssRu bSLYNV"
+  >
+    <div
+      className="sc-dlnjPT trapk"
+    >
+      <div
+        className="sc-bdnylx iyBpVC"
+      >
+        <div
+          className="sc-iCoHVE feFylL"
+        >
+          Cleanliness
+        </div>
+        <div
+          className="sc-hKFyIo dssyQL"
+        >
+          <div
+            className="sc-eCApGN eqkkYc"
+          >
+            <span
+              className="sc-jSFkmK bBPJxI"
+              width="62.400000000000006px"
+            />
+          </div>
+          <span
+            className="sc-gKAblj eQqGZE"
+          >
+            2.6
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-dlnjPT trapk"
+    >
+      <div
+        className="sc-bdnylx iyBpVC"
+      >
+        <div
+          className="sc-iCoHVE feFylL"
+        >
+           Communication 
+        </div>
+        <div
+          className="sc-hKFyIo dssyQL"
+        >
+          <div
+            className="sc-eCApGN eqkkYc"
+          >
+            <span
+              className="sc-jSFkmK lisxYX"
+              width="96px"
+            />
+          </div>
+          <span
+            className="sc-gKAblj eQqGZE"
+          >
+            4
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-dlnjPT trapk"
+    >
+      <div
+        className="sc-bdnylx iyBpVC"
+      >
+        <div
+          className="sc-iCoHVE feFylL"
+        >
+          Check-in
+        </div>
+        <div
+          className="sc-hKFyIo dssyQL"
+        >
+          <div
+            className="sc-eCApGN eqkkYc"
+          >
+            <span
+              className="sc-jSFkmK kxmQDo"
+              width="91.2px"
+            />
+          </div>
+          <span
+            className="sc-gKAblj eQqGZE"
+          >
+            3.8
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-dlnjPT trapk"
+    >
+      <div
+        className="sc-bdnylx iyBpVC"
+      >
+        <div
+          className="sc-iCoHVE feFylL"
+        >
+          Accuracy
+        </div>
+        <div
+          className="sc-hKFyIo dssyQL"
+        >
+          <div
+            className="sc-eCApGN eqkkYc"
+          >
+            <span
+              className="sc-jSFkmK cwAyRY"
+              width="79.19999999999999px"
+            />
+          </div>
+          <span
+            className="sc-gKAblj eQqGZE"
+          >
+            3.3
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-dlnjPT trapk"
+    >
+      <div
+        className="sc-bdnylx iyBpVC"
+      >
+        <div
+          className="sc-iCoHVE feFylL"
+        >
+          Location
+        </div>
+        <div
+          className="sc-hKFyIo dssyQL"
+        >
+          <div
+            className="sc-eCApGN eqkkYc"
+          >
+            <span
+              className="sc-jSFkmK ekztcn"
+              width="93.60000000000001px"
+            />
+          </div>
+          <span
+            className="sc-gKAblj eQqGZE"
+          >
+            3.9
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-dlnjPT trapk"
+    >
+      <div
+        className="sc-bdnylx iyBpVC"
+      >
+        <div
+          className="sc-iCoHVE feFylL"
+        >
+          Value
+        </div>
+        <div
+          className="sc-hKFyIo dssyQL"
+        >
+          <div
+            className="sc-eCApGN eqkkYc"
+          >
+            <span
+              className="sc-jSFkmK dIpmfF"
+              width="98.39999999999999px"
+            />
+          </div>
+          <span
+            className="sc-gKAblj eQqGZE"
+          >
+            4.1
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

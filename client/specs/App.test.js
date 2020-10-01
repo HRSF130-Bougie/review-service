@@ -1,5 +1,4 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
 import { render } from 'enzyme';
 import App from '../src/components/App.jsx';
 
