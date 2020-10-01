@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Wrapper = styled.section`
+
+
+  const Wrapper = styled.section`
   display:inline-flex;
   font-size: 22px ;
   font-weight : 600;
@@ -13,11 +15,12 @@ const Wrapper = styled.section`
 
     `;
 
-const Star = styled.span`
+  const Star = styled.span`
       color : rgb(146, 23, 77);
       margin-right:8px;
     `;
-const Header = (props) => {
+    const Header = (props) => {
+
   let rate = '';
 
   let cleanliness = '';
@@ -41,14 +44,7 @@ const Header = (props) => {
     <Wrapper>
       <Star>⭑</Star>
       <span id="rate">{rate}</span>
-      <span>
-        {' '}
-        (
-        {props.values.length}
-        {' '}
-        reviews)
-        {' '}
-      </span>
+      <span> ({props.values.length} reviews) </span>
     </Wrapper>
   );
 };
