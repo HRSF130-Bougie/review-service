@@ -1,10 +1,13 @@
 /* eslint-disable import/extensions */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
-import Header from './Header.jsx';
-import ListReview from './ListReview.jsx';
-import Rating from './Rating.jsx';
 import styled from 'styled-components';
+import Rating from './Rating.jsx';
+import ListReview from './ListReview.jsx';
+import Header from './Header.jsx';
+
+
+
 
 class App extends React.Component {
   constructor(props) {
@@ -19,8 +22,9 @@ class App extends React.Component {
     this.getAllReviews();
   }
 
-  getAllReviews() { 
-    fetch('/api/reviews')
+  getAllReviews() {
+    const random = Math.floor(Math.random() * (100 - 1) + 1);
+    fetch(`/api/reviews/${random}`)
       .then((res) => res.json())
       .then((result) => this.setState({
         reviews: result,
@@ -51,7 +55,7 @@ class App extends React.Component {
     return (
       <Body>
         <Header values={this.state.reviews} />
-        <Rating values={this.state.reviews}/>
+        <Rating values={this.state.reviews} />
         <ListReview values={this.state.reviews} />
         <div className="showMore" />
       </Body>

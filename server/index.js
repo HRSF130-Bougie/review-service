@@ -13,10 +13,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/', express.static(path.join(__dirname, '../client/dist')));
 
-app.get('/api/reviews', (req, res) => {
-  const q = 'SELECT * FROM review LEFT JOIN hotels ON hotelID = hotels.id ';
-  db.seed();
-  db.connection.query(q, (err, data) => {
+app.get('/api/reviews/:id', (req, res) => {
+
+  const {id} = req.params;
+  console.log("ID", id);
+    
+  const q = `SELECT * FROM review, hotels WHERE hotels.id =${id} AND hotels.id = review.hotelID`;
+  console.log(q)
+  db.query(q, (err, data) => {
     if (err) {
       res.status(400).send();
     } else {
@@ -27,8 +31,7 @@ app.get('/api/reviews', (req, res) => {
 
 // // app.get('/api/review', (req, res) => {
 // //   const q = 'SELECT * FROM review';
-// //   db.seed();
-// //   db.connection.query(q, (err, data) => {
+// //   db.seed();cc/ //   db.connection.query(q, (err, data) => {
 // //     if (err) {
 // //       res.status(400).send();
 // //     } else {
