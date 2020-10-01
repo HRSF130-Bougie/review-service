@@ -4,9 +4,23 @@ import styled from 'styled-components';
 const Header = (props) => {
   let rate = '';
 
-  props.values.forEach((one) => {
-    rate = one.rate;
-});
+  let cleanliness = '';
+  let communication = '';
+  let checkIn = '';
+  let accuracy = '';
+  let location = '';
+  let value = '';
+
+  props.values.forEach((item) => {
+    cleanliness = item.cleanRate;
+    communication = item.commRate;
+    checkIn = item.checkinRate;
+    accuracy = item.acuurRate;
+    location = item.locRate;
+    value = item.valueRate;
+  });
+
+  rate = ((cleanliness + communication + checkIn + accuracy + location + value) / 6).toFixed(2);
 
   const Wrapper = styled.section`
   display:inline-flex;

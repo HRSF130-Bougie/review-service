@@ -3,8 +3,8 @@
 import React from 'react';
 import Header from './Header.jsx';
 import ListReview from './ListReview.jsx';
+import Rating from './Rating.jsx';
 import styled from 'styled-components';
-
 
 class App extends React.Component {
   constructor(props) {
@@ -32,6 +32,7 @@ class App extends React.Component {
   render() {
     const Body = styled.section`
     display : flex; 
+    max-width: 1120px;
     justify-content: space-between; 
     flex-direction:column ; 
     width : 1919px;
@@ -40,12 +41,17 @@ class App extends React.Component {
     font-size: 16px ;
     padding-left:24px;
     padding-right:24px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    margin-left: auto;
+    margin-right: auto;
+  
     `;
 
     return (
       <Body>
         <Header values={this.state.reviews} />
-        <div className="rating" />
+        <Rating values={this.state.reviews}/>
         <ListReview values={this.state.reviews} />
         <div className="showMore" />
       </Body>
