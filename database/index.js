@@ -1,6 +1,7 @@
 const mysql = require('mysql');
 
 const faker = require('faker');
+const { random } = require('faker');
 
 const connection = mysql.createConnection({
   user: 'root',
@@ -40,7 +41,7 @@ const seed = () => {
     // eslint-disable-next-line no-console
     console.log(visitorName1);
     const avatar1 = faker.image.avatar(); // console.log('AVATAR' ,avatar1);
-    const review1 = faker.lorem.paragraph();
+    const review1 = faker.random.words( Math.floor(Math.random() * 70) + 1);
     const hotelID = Math.floor(Math.random() * (100 - 1) + 1);
     // eslint-disable-next-line prefer-template
     const date = faker.date.month() + ' ' + faker.random.number({ min: 2017, max: 2020 });
