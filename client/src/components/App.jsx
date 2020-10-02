@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Rating from './Rating.jsx';
 import ListReview from './ListReview.jsx';
 import Header from './Header.jsx';
+import Button from './Button.jsx';
 
 
 
@@ -57,7 +58,7 @@ class App extends React.Component {
         <Header values={this.state.reviews} />
         <Rating values={this.state.reviews} />
         <ListReview values={this.state.reviews} />
-        <div className="showMore" />
+        < Button reviewsNum = {this.state.reviews.length}/>
       </Body>
 
     );
