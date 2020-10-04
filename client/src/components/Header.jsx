@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled ,{css} from 'styled-components';
 
 
 
@@ -12,6 +12,13 @@ import styled from 'styled-components';
   -webkit-font-smoothing:antialiased;
   padding-bottom:32px;
   padding-top:32px;
+
+  ${({correct}) => !correct && css`  
+  font-size: 32px !important;
+  line-height: 36px !important;
+    
+
+    `}
 
     `;
 
@@ -41,7 +48,7 @@ import styled from 'styled-components';
 
   rate = ((cleanliness + communication + checkIn + accuracy + location + value) / 6).toFixed(2);
   return (
-    <Wrapper>
+    <Wrapper correct = {props.correct}>
       <Star>⭑</Star>
       <span id="rate">{rate}</span>
       <span> ({props.values.length} reviews) </span>

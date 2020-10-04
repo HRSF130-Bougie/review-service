@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-
+// eslint-disable-next-line import/extensions
+import Dialog from './Dialog.jsx';
 
 const Show = styled.button`
 background-color: rgb(255, 255, 255) ;
@@ -19,15 +20,30 @@ font-size: 16px !important;
     }
 `;
 
+class Button extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isClicked: false,
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
 
+  handleClick() {
+    this.setState({
+      isClicked: !this.state.isClicked,
+    });
+  }
 
-const Button = (props) => {
-return(
-    <div>
-        <Show>{`Show all ${props.reviewsNum} reviews`}</Show>
-        <dialog open>This is an open dialog window</dialog>
-    </div>
-)
+  render() {
+    return (
+      <div>
+        <Show onClick={this.handleClick}>{`Show all ${this.props.reviews.length} reviews`}</Show>
+        {this.state.isClicked ? <Dialog reviews={this.props.reviews} /> : null}
+
+      </div>
+    );
+  }
 }
 
 export default Button;

@@ -7,9 +7,6 @@ import ListReview from './ListReview.jsx';
 import Header from './Header.jsx';
 import Button from './Button.jsx';
 
-
-
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -55,10 +52,10 @@ class App extends React.Component {
 
     return (
       <Body>
-        <Header values={this.state.reviews} />
-        <Rating values={this.state.reviews} />
-        <ListReview values={this.state.reviews} />
-        < Button reviewsNum = {this.state.reviews.length}/>
+        <Header values={this.state.reviews} correct />
+        <Rating values={this.state.reviews} correct />
+        <ListReview values={this.state.reviews} correct />
+        <Button reviews={this.state.reviews} />
       </Body>
 
     );
