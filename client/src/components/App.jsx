@@ -5,9 +5,7 @@ import styled from 'styled-components';
 import Rating from './Rating.jsx';
 import ListReview from './ListReview.jsx';
 import Header from './Header.jsx';
-
-
-
+import Button from './Button.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -54,10 +52,10 @@ class App extends React.Component {
 
     return (
       <Body>
-        <Header values={this.state.reviews} />
-        <Rating values={this.state.reviews} />
-        <ListReview values={this.state.reviews} />
-        <div className="showMore" />
+        <Header values={this.state.reviews} correct />
+        <Rating values={this.state.reviews} correct />
+        <ListReview values={this.state.reviews} correct />
+        <Button reviews={this.state.reviews} />
       </Body>
 
     );
