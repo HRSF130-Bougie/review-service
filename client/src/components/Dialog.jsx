@@ -126,8 +126,8 @@ const ReviewsSec = styled.div`
 const Squares = styled.div`
     position:fixed; 
     z-index: 2000 !important;
-    margin-top : 495px;
-    margin-left : 250px;
+    margin-top : 1180px;
+    margin-left : 650px;
   `;
 
 const Span1 = styled.span`
@@ -158,7 +158,7 @@ class Dialog extends React.Component {
 
     };
     this.handleClick = this.handleClick.bind(this);
-    this.handleScrollFrame = this.handleScrollFrame.bind(this);
+    this.handleScrollStop = this.handleScrollStop.bind(this);
   }
 
   handleClick() {
@@ -168,7 +168,7 @@ class Dialog extends React.Component {
     });
   }
 
-  handleScrollFrame() {
+  handleScrollStop() {
     this.setState({
       isScrollrd: !this.state.isScrollrd,
 
@@ -180,7 +180,7 @@ class Dialog extends React.Component {
       <div>
         {this.state.isClicked ? null
           : (
-            <Container1 onClick={this.handleClick}>
+            <Container1>
               <Shell>
                 <DialogBox>
                   <HeaderBar>
@@ -188,20 +188,22 @@ class Dialog extends React.Component {
                       &#10005;
                     </Button>
                   </HeaderBar>
-                  <Scrollbars style={{ width: 1032, height: 1200 }} onScrollFrame={this.handleScrollFrame}>
+                  <Scrollbars style={{ width: 1032, height: 1200 }} onScrollStop={this.handleScrollStop}>
                     <Body>
                       <RatingSec>
                         <Header values={this.props.reviews} correct={false} />
                         <Rating values={this.props.reviews} correct={false} />
                       </RatingSec>
                       <ReviewsSec>
-                        <ListReview values={this.props.reviews} correct={false} />
+                        <ListReview values={this.props.reviews} correct={false} />                 
+                        </ReviewsSec>
+                        {this.state.isScrollrd ? 
                         <Squares>
                           <Span1>&#9642;</Span1>
                           <Span2>&#9642;</Span2>
                           <Span3>&#9642;</Span3>
                         </Squares>
-                      </ReviewsSec>
+                        : null }
                     </Body>
                   </Scrollbars>
                 </DialogBox>
