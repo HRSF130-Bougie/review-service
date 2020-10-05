@@ -7,8 +7,8 @@ const Container = styled.section`
     display: grid;
     grid-template-columns: 1fr 1fr ;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-column-gap : 10%;
     margin-bottom: 24px ;
+    grid-column-gap : 5%;
     min-width: 744px;
     width: calc(100% + 16px);
 

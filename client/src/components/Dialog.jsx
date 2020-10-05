@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable import/extensions */
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
@@ -19,6 +20,17 @@ const slideIn = keyframes`
   }
 `;
 
+const fadeIn = keyframes`
+  0% {
+    opacity: 0.2;
+   
+  }
+  100% {
+    opacity: 1;
+   
+  }
+`;
+
 const Container1 = styled.div`
 
     background: rgb(34, 34, 34 , 0.6) !important;
@@ -28,10 +40,7 @@ const Container1 = styled.div`
     right: 0px !important;
     bottom: 0px !important;
     left: 0px !important;
-    animation-duration: 400ms !important;
-    animation-iteration-count: 1 !important;
-    animation-fill-mode: both !important;
-    animation : ${slideIn};
+   
 }
 `;
 
@@ -39,7 +48,7 @@ const Shell = styled.div`
     padding: 40px !important;
     align-items: center !important;
     flex: 1 1 auto !important;
-    padding: 24px !important;
+  
 }
 
 `;
@@ -56,6 +65,10 @@ const DialogBox = styled.dialog`
     box-shadow: rgba(0, 0, 0, 0.28) 0px 8px 28px !important;
     opacity:1 ;
     background: rgb(255, 255, 255) !important;
+    animation-duration: 400ms !important;
+    animation-iteration-count: 1 !important;
+    animation-fill-mode: both !important;
+    animation : ${slideIn};
 `;
 
 const HeaderBar = styled.div`
@@ -86,26 +99,54 @@ const Button = styled.button`
 
 const Body = styled.div`
     padding: 24px ;
-    padding-top : 0px
+    padding-top : 0px;
 
 `;
 
 const RatingSec = styled.section`
-    position: sticky !important;
-    width: 33.3333% !important;
+    
+    position:fixed; 
+    z-index: 2000 !important;
+    width: 333.34px;
     float: left !important;
     padding-left: -10px !important;
     padding-right: 8px !important;
     min-height: 1px !important;
-   
+
   `;
 
 const ReviewsSec = styled.div`
-   width: 58.3333% !important;
+    width: 58.3333% !important;
     float: right !important;
     margin-top: 30px;
 
     
+  `;
+
+const Squares = styled.div`
+    position:fixed; 
+    z-index: 2000 !important;
+    margin-top : 495px;
+    margin-left : 250px;
+  `;
+
+const Span1 = styled.span`
+    animation:${fadeIn} ease-out 3s infinite;
+    animation-fill-mode:forwards;  
+    animation-duration:400ms;  
+    animation-delay: 0s;
+  `;
+const Span2 = styled.span`
+    animation:${fadeIn} ease-out 3s infinite;  
+    animation-fill-mode:forwards;  
+    animation-duration:400ms;  
+    animation-delay: 100ms;
+  `;
+const Span3 = styled.span`
+    animation:${fadeIn} ease-out 3s infinite;
+    animation-fill-mode:forwards;  
+    animation-duration:400ms;  
+    animation-delay: 200ms;
   `;
 
 class Dialog extends React.Component {
@@ -113,14 +154,23 @@ class Dialog extends React.Component {
     super(props);
     this.state = {
       isClicked: false,
+      isScrollrd: false,
 
     };
     this.handleClick = this.handleClick.bind(this);
+    this.handleScrollFrame = this.handleScrollFrame.bind(this);
   }
 
   handleClick() {
     this.setState({
       isClicked: !this.state.isClicked,
+
+    });
+  }
+
+  handleScrollFrame() {
+    this.setState({
+      isScrollrd: !this.state.isScrollrd,
 
     });
   }
@@ -138,16 +188,21 @@ class Dialog extends React.Component {
                       &#10005;
                     </Button>
                   </HeaderBar>
-                  <Scrollbars style={{ width: 1032, height: 1200 }}>
-                  <Body>
-                    <RatingSec>
-                      <Header values={this.props.reviews} correct={false} />
-                      <Rating values={this.props.reviews} correct={false} />
-                    </RatingSec>
-                    <ReviewsSec>
-                      <ListReview values={this.props.reviews} correct={false} />
-                    </ReviewsSec>
-                  </Body>
+                  <Scrollbars style={{ width: 1032, height: 1200 }} onScrollFrame={this.handleScrollFrame}>
+                    <Body>
+                      <RatingSec>
+                        <Header values={this.props.reviews} correct={false} />
+                        <Rating values={this.props.reviews} correct={false} />
+                      </RatingSec>
+                      <ReviewsSec>
+                        <ListReview values={this.props.reviews} correct={false} />
+                        <Squares>
+                          <Span1>&#9642;</Span1>
+                          <Span2>&#9642;</Span2>
+                          <Span3>&#9642;</Span3>
+                        </Squares>
+                      </ReviewsSec>
+                    </Body>
                   </Scrollbars>
                 </DialogBox>
               </Shell>

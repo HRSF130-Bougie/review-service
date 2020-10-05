@@ -42,15 +42,13 @@ class App extends React.Component {
     hight : 912px;
     font-family :-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
     font-size: 16px ;
-    padding-left:24px;
-    padding-right:24px;
     padding-top: 48px;
     padding-bottom: 48px;
     margin-left: auto;
     margin-right: auto;
     `;
 
-    
+
     return (
       <Body>
         <Header values={this.state.reviews} correct />

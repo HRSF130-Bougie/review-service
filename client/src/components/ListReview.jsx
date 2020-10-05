@@ -13,7 +13,9 @@ const ListReview = (props) => {
     display : grid;
     grid-template-columns: 1fr 1fr ;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-column-gap : 10%;
+    grid-column-gap : 7%;
+    height : 100%;
+    
 
     ${({ correct }) => !correct && css`  
      display : flex;

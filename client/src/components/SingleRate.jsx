@@ -19,7 +19,7 @@ const Single = styled.div`
 display: flex ;
 position: relative;
 flex-direction: row ;
-width: 30% ;
+width: 42% !important;
 padding-left: 8px ;
 padding-right: 8px ;
 
