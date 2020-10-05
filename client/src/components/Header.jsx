@@ -26,7 +26,6 @@ const Star = styled.span`
     `;
 const Header = (props) => {
   let rate = '';
-
   let cleanliness = '';
   let communication = '';
   let checkIn = '';
@@ -49,12 +48,9 @@ const Header = (props) => {
       <Star>⭑</Star>
       <span id="rate">{rate}</span>
       <span>
-        {' '}
         (
         {props.values.length}
-        {' '}
         reviews)
-        {' '}
       </span>
     </Wrapper>
   );

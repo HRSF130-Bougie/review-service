@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`My compnent it works 1`] = `
+<div>
+  <button
+    className="sc-iwaifL emuFVf"
+    onClick={[Function]}
+  >
+    Show all 1 reviews
+  </button>
+</div>
+`;

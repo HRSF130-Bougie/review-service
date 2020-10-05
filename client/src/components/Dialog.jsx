@@ -188,21 +188,23 @@ class Dialog extends React.Component {
                       &#10005;
                     </Button>
                   </HeaderBar>
-                  <Scrollbars style={{ width: 1032, height: 1200 }} onScrollStop={this.handleScrollStop}>
+                  <Scrollbars style={{ width: 1032, height: 1200 }}  onScrollFrame ={this.handleScrollStop}>
                     <Body>
                       <RatingSec>
                         <Header values={this.props.reviews} correct={false} />
                         <Rating values={this.props.reviews} correct={false} />
                       </RatingSec>
                       <ReviewsSec>
-                        <ListReview values={this.props.reviews} correct={false} />                 
-                        </ReviewsSec>
-                        {this.state.isScrollrd ? 
-                        <Squares>
-                          <Span1>&#9642;</Span1>
-                          <Span2>&#9642;</Span2>
-                          <Span3>&#9642;</Span3>
-                        </Squares>
+                        <ListReview values={this.props.reviews} correct={false} />
+                      </ReviewsSec>
+                      {this.state.isScrollrd
+                        ? (
+                          <Squares>
+                            <Span1>&#9642;</Span1>
+                            <Span2>&#9642;</Span2>
+                            <Span3>&#9642;</Span3>
+                          </Squares>
+                        )
                         : null }
                     </Body>
                   </Scrollbars>

@@ -1,0 +1,362 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`My compnent it works 1`] = `
+<div>
+  <div
+    className="sc-ksluoS ebLbCZ"
+  >
+    <div
+      className="sc-hBMVcZ egrMeE"
+    >
+      <dialog
+        className="sc-fnVYJo RKNod"
+      >
+        <div
+          className="sc-fFSRdu ekVcHq"
+        >
+          <button
+            className="sc-bkbjAj hCiGhg"
+            onClick={[Function]}
+          >
+            ✕
+          </button>
+        </div>
+        <div
+          style={
+            Object {
+              "height": 1200,
+              "overflow": "hidden",
+              "position": "relative",
+              "width": 1032,
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "WebkitOverflowScrolling": "touch",
+                "bottom": 0,
+                "left": 0,
+                "marginBottom": 0,
+                "marginRight": 0,
+                "overflow": "scroll",
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          >
+            <div
+              className="sc-iemXMA cJSyZE"
+            >
+              <section
+                className="sc-dIvqjp cdFAEK"
+              >
+                <section
+                  className="sc-bdnylx eTnxoq"
+                >
+                  <span
+                    className="sc-gtssRu eZXodF"
+                  >
+                    ⭑
+                  </span>
+                  <span
+                    id="rate"
+                  >
+                    3.62
+                  </span>
+                  <span>
+                     
+                    (
+                    1
+                     
+                    reviews)
+                     
+                  </span>
+                </section>
+                <div>
+                  <section
+                    className="sc-pNWxx iJpphk"
+                  >
+                    <div
+                      className="sc-hKFyIo fTXnyu"
+                    >
+                      <div
+                        className="sc-dlnjPT dFogxj"
+                      >
+                        <div
+                          className="sc-fujyUd XjinS"
+                        >
+                          Cleanliness
+                        </div>
+                        <div
+                          className="sc-eCApGN iixnbU"
+                        >
+                          <div
+                            className="sc-jSFkmK jNLZYv"
+                          >
+                            <span
+                              className="sc-gKAblj bqbliG"
+                              width="52px"
+                            />
+                          </div>
+                          <span
+                            className="sc-iCoHVE cBkmtr"
+                          >
+                            2.6
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="sc-hKFyIo fTXnyu"
+                    >
+                      <div
+                        className="sc-dlnjPT dFogxj"
+                      >
+                        <div
+                          className="sc-fujyUd XjinS"
+                        >
+                          Accuracy
+                        </div>
+                        <div
+                          className="sc-eCApGN iixnbU"
+                        >
+                          <div
+                            className="sc-jSFkmK jNLZYv"
+                          >
+                            <span
+                              className="sc-gKAblj gaBoCk"
+                              width="65.99999999999999px"
+                            />
+                          </div>
+                          <span
+                            className="sc-iCoHVE cBkmtr"
+                          >
+                            3.3
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="sc-hKFyIo fTXnyu"
+                    >
+                      <div
+                        className="sc-dlnjPT dFogxj"
+                      >
+                        <div
+                          className="sc-fujyUd XjinS"
+                        >
+                          Communication
+                        </div>
+                        <div
+                          className="sc-eCApGN iixnbU"
+                        >
+                          <div
+                            className="sc-jSFkmK jNLZYv"
+                          >
+                            <span
+                              className="sc-gKAblj cLKeCV"
+                              width="80px"
+                            />
+                          </div>
+                          <span
+                            className="sc-iCoHVE cBkmtr"
+                          >
+                            4
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="sc-hKFyIo fTXnyu"
+                    >
+                      <div
+                        className="sc-dlnjPT dFogxj"
+                      >
+                        <div
+                          className="sc-fujyUd XjinS"
+                        >
+                          Location
+                        </div>
+                        <div
+                          className="sc-eCApGN iixnbU"
+                        >
+                          <div
+                            className="sc-jSFkmK jNLZYv"
+                          >
+                            <span
+                              className="sc-gKAblj fzjjLK"
+                              width="78px"
+                            />
+                          </div>
+                          <span
+                            className="sc-iCoHVE cBkmtr"
+                          >
+                            3.9
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="sc-hKFyIo fTXnyu"
+                    >
+                      <div
+                        className="sc-dlnjPT dFogxj"
+                      >
+                        <div
+                          className="sc-fujyUd XjinS"
+                        >
+                          Check-in
+                        </div>
+                        <div
+                          className="sc-eCApGN iixnbU"
+                        >
+                          <div
+                            className="sc-jSFkmK jNLZYv"
+                          >
+                            <span
+                              className="sc-gKAblj ktwKzI"
+                              width="76px"
+                            />
+                          </div>
+                          <span
+                            className="sc-iCoHVE cBkmtr"
+                          >
+                            3.8
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="sc-hKFyIo fTXnyu"
+                    >
+                      <div
+                        className="sc-dlnjPT dFogxj"
+                      >
+                        <div
+                          className="sc-fujyUd XjinS"
+                        >
+                          Value
+                        </div>
+                        <div
+                          className="sc-eCApGN iixnbU"
+                        >
+                          <div
+                            className="sc-jSFkmK jNLZYv"
+                          >
+                            <span
+                              className="sc-gKAblj Yxmzj"
+                              width="82px"
+                            />
+                          </div>
+                          <span
+                            className="sc-iCoHVE cBkmtr"
+                          >
+                            4.1
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </section>
+              <div
+                className="sc-hHEjAm dRyrWo"
+              >
+                <div>
+                  <section
+                    className="sc-iwaifL llFrOB"
+                  >
+                    <div>
+                      <div
+                        className="sc-jrsJCI deVTMO"
+                      >
+                        <div
+                          className="sc-kEqYlL kHxZVQ"
+                        >
+                          <div>
+                            <img
+                              className="sc-crzoUp dyouYZ"
+                              src="https://s3.amazonaws.com/uifaces/faces/twitter/langate/128.jpg"
+                            />
+                          </div>
+                          <div
+                            className="sc-iqAbSa ehHacr"
+                          >
+                            Ms. Lula Shanahan
+                            <div
+                              className="sc-dIsAE iAHGRp"
+                            >
+                              August 2018
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          Expedita non est asperiores voluptatem eius sit. Sapiente qui debitis sint blanditiis cum hic. Tempora iure nam.
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "borderRadius": 3,
+                "bottom": 2,
+                "display": "none",
+                "height": 6,
+                "left": 2,
+                "position": "absolute",
+                "right": 2,
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "backgroundColor": "rgba(0,0,0,.2)",
+                  "borderRadius": "inherit",
+                  "cursor": "pointer",
+                  "display": "block",
+                  "height": "100%",
+                  "position": "relative",
+                }
+              }
+            />
+          </div>
+          <div
+            style={
+              Object {
+                "borderRadius": 3,
+                "bottom": 2,
+                "display": "none",
+                "position": "absolute",
+                "right": 2,
+                "top": 2,
+                "width": 6,
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "backgroundColor": "rgba(0,0,0,.2)",
+                  "borderRadius": "inherit",
+                  "cursor": "pointer",
+                  "display": "block",
+                  "position": "relative",
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
+        </div>
+      </dialog>
+    </div>
+  </div>
+</div>
+`;

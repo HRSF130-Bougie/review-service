@@ -1,7 +1,6 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
-import Rating from '../src/components/Rating';
+import Button from '../src/components/Button.jsx';
 
 describe('My compnent', () => {
   const testProps = [
@@ -23,7 +22,7 @@ describe('My compnent', () => {
   ];
 
   it('it works', () => {
-    const tree = renderer.create(<Rating values={testProps} />).toJSON();
+    const tree = renderer.create(<Button reviews={testProps} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

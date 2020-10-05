@@ -40,16 +40,16 @@ const Rating = (props) => {
   });
 
   const array = [
-    { name: 'Cleanliness', rate: cleanliness },
-    { name: 'Accuracy', rate: accuracy },
-    { name: 'Communication', rate: communication },
-    { name: 'Location', rate: location },
-    { name: 'Check-in', rate: checkIn },
-    { name: 'Value', rate: value },
+    { name: 'Cleanliness', rate: cleanliness, id: 1 },
+    { name: 'Accuracy', rate: accuracy, id: 2 },
+    { name: 'Communication', rate: communication, id: 3 },
+    { name: 'Location', rate: location, id: 4 },
+    { name: 'Check-in', rate: checkIn, id: 5 },
+    { name: 'Value', rate: value, id: 6 },
   ];
 
   const rating = array.map((item) => (
-    <SingleRate name={item.name} rate={item.rate} correct={props.correct} />
+    <SingleRate name={item.name} rate={item.rate} key={item.id} correct={props.correct} />
   ));
 
   return (

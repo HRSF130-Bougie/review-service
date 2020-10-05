@@ -7,6 +7,22 @@ import ListReview from './ListReview.jsx';
 import Header from './Header.jsx';
 import Button from './Button.jsx';
 
+const Body = styled.section`
+display : flex; 
+max-width: 1120px;
+background-color: #fff;
+justify-content: space-between; 
+flex-direction:column ; 
+width : 1919px;
+hight : 912px;
+font-family :-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+font-size: 16px ;
+padding-top: 48px;
+padding-bottom: 48px;
+margin-left: auto;
+margin-right: auto;
+`;
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -32,23 +48,6 @@ class App extends React.Component {
   }
 
   render() {
-    const Body = styled.section`
-    display : flex; 
-    max-width: 1120px;
-    background-color: #fff;
-    justify-content: space-between; 
-    flex-direction:column ; 
-    width : 1919px;
-    hight : 912px;
-    font-family :-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
-    font-size: 16px ;
-    padding-top: 48px;
-    padding-bottom: 48px;
-    margin-left: auto;
-    margin-right: auto;
-    `;
-
-
     return (
       <Body>
         <Header values={this.state.reviews} correct />
