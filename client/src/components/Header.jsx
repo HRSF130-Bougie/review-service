@@ -1,9 +1,7 @@
 import React from 'react';
-import styled ,{css} from 'styled-components';
+import styled, { css } from 'styled-components';
 
-
-
-  const Wrapper = styled.section`
+const Wrapper = styled.section`
   display:inline-flex;
   font-size: 22px ;
   font-weight : 600;
@@ -13,7 +11,7 @@ import styled ,{css} from 'styled-components';
   padding-bottom:32px;
   padding-top:32px;
 
-  ${({correct}) => !correct && css`  
+  ${({ correct }) => !correct && css`  
   font-size: 32px !important;
   line-height: 36px !important;
     
@@ -22,12 +20,11 @@ import styled ,{css} from 'styled-components';
 
     `;
 
-  const Star = styled.span`
+const Star = styled.span`
       color : rgb(146, 23, 77);
       margin-right:8px;
     `;
-    const Header = (props) => {
-
+const Header = (props) => {
   let rate = '';
 
   let cleanliness = '';
@@ -48,10 +45,17 @@ import styled ,{css} from 'styled-components';
 
   rate = ((cleanliness + communication + checkIn + accuracy + location + value) / 6).toFixed(2);
   return (
-    <Wrapper correct = {props.correct}>
+    <Wrapper correct={props.correct}>
       <Star>⭑</Star>
       <span id="rate">{rate}</span>
-      <span> ({props.values.length} reviews) </span>
+      <span>
+        {' '}
+        (
+        {props.values.length}
+        {' '}
+        reviews)
+        {' '}
+      </span>
     </Wrapper>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import styled , {css} from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const Wrapper = styled.div`
   display: flex;
@@ -8,7 +8,6 @@ const Wrapper = styled.div`
   
      `;
 
-  
 const Rate = styled.div`
 width: 100%;
 height: 100%;
@@ -24,7 +23,7 @@ width: 30% ;
 padding-left: 8px ;
 padding-right: 8px ;
 
-${({correct}) => !correct && css`  
+${({ correct }) => !correct && css`  
 padding-left: 0px;
 padding-right: 0px;
 width: 50% ;
@@ -33,7 +32,6 @@ width: 50% ;
     `}
 
 `;
-
 
 const ProgressShell = styled.div`
 
@@ -46,7 +44,6 @@ height: 4px ;
 background: rgb(221, 221, 221);
 margin-right: 4px;  
 `;
-
 
 const Progress = styled.span`
     position:absolute  ;
@@ -75,35 +72,34 @@ font-weight: 400 ;
 font-size: 16px ;
 line-height: 20px;
 
-${({correct}) => !correct && css`  
+${({ correct }) => !correct && css`  
 font-size: 14px ;
 
     `}
-`;    
+`;
 
-    
 const SingleRate = (props) => {
-    let singleWidth ;
+  let singleWidth;
 
-    if (props.correct) {
-        singleWidth = 120 ;
-    } else { 
-        singleWidth = 100 ;
-    }
-    
-    return (
-        <Rate>
-          <Wrapper>
-           <Font correct = {props.correct} >{props.name}</Font>
-            <Single correct = {props.correct}>
-              <ProgressShell singleWidth = {`${singleWidth}px`} >   
-                <Progress width={`${props.rate / 5 * singleWidth}px`}  />
-              </ProgressShell>
-              <RatingOne>{props.rate}</RatingOne>
-            </Single>
-          </Wrapper>
-        </Rate>
-    )
-}
+  if (props.correct) {
+    singleWidth = 120;
+  } else {
+    singleWidth = 100;
+  }
+
+  return (
+    <Rate>
+      <Wrapper>
+        <Font correct={props.correct}>{props.name}</Font>
+        <Single correct={props.correct}>
+          <ProgressShell singleWidth={`${singleWidth}px`}>
+            <Progress width={`${props.rate / 5 * singleWidth}px`} />
+          </ProgressShell>
+          <RatingOne>{props.rate}</RatingOne>
+        </Single>
+      </Wrapper>
+    </Rate>
+  );
+};
 
 export default SingleRate;

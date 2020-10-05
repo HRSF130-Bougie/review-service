@@ -130,7 +130,7 @@ class Dialog extends React.Component {
       <div>
         {this.state.isClicked ? null
           : (
-            <Container1>
+            <Container1 onClick={this.handleClick}>
               <Shell>
                 <DialogBox>
                   <HeaderBar>

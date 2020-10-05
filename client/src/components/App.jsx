@@ -35,6 +35,7 @@ class App extends React.Component {
     const Body = styled.section`
     display : flex; 
     max-width: 1120px;
+    background-color: #fff;
     justify-content: space-between; 
     flex-direction:column ; 
     width : 1919px;
@@ -47,9 +48,9 @@ class App extends React.Component {
     padding-bottom: 48px;
     margin-left: auto;
     margin-right: auto;
-  
     `;
 
+    
     return (
       <Body>
         <Header values={this.state.reviews} correct />

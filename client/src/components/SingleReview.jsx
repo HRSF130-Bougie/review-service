@@ -1,6 +1,6 @@
+/* eslint-disable react/sort-comp */
 import React from 'react';
 import styled from 'styled-components';
-
 
 const Review = styled.div`
 font-family:Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
@@ -41,7 +41,7 @@ color: rgb(113, 113, 113) ;
     line-height: 20px ;
    
 `;
-const Button =styled.span`
+const Button = styled.span`
 font-weight: 600 !important;
 text-decoration: underline;
 : hover {
@@ -50,77 +50,80 @@ text-decoration: underline;
  
 `;
 
-class SingleReview extends React.Component { 
-
-    constructor(props){
-        super(props);
-        this.state = {
-            moreThan25 : false,
-            before : '',
-            after : ''
-        }
-    this.moreThan25 =this.moreThan25.bind(this);
+class SingleReview extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      moreThan25: false,
+      before: '',
+      after: '',
+    };
+    this.moreThan25 = this.moreThan25.bind(this);
     this.handleClick = this.handleClick.bind(this);
-    }
+  }
 
-
-moreThan25 (){
+  moreThan25() {
     const arrayOfwords = (this.props.review).split(' ');
-    const length = arrayOfwords.length;
-    console.log(length)
-    if (length > 25 ){
-        this.setState({
-            moreThan25 : true,
-            before : arrayOfwords.slice(0 , 24).join(' '),
-            isClicked : false,      
-        })
-        
+    const { length } = arrayOfwords;
+    console.log(length);
+    if (length > 25) {
+      this.setState({
+        moreThan25: true,
+        before: arrayOfwords.slice(0, 24).join(' '),
+        isClicked: false,
+      });
     }
- }
+  }
 
-  componentDidMount(){
-      this.moreThan25();
+  componentDidMount() {
+    this.moreThan25();
   }
 
   handleClick() {
-      this.setState({
-          isClicked : !this.state.isClicked ,
-      })
+    this.setState({
+      isClicked: !this.state.isClicked,
+    });
   }
 
-
-render() {
+  render() {
     let display = '';
 
     if (this.state.moreThan25) {
-        if (this.state.isClicked){
-            display  =  <div>{this.props.review}</div>
-        } else {
-            display = <div><span>{this.state.before}...</span> <Button onClick = {this.handleClick} >read more</Button></div>
-        } 
-    
-     } else {
-        display =  <div>{this.props.review}</div> 
-    } 
-    
+      if (this.state.isClicked) {
+        display = <div>{this.props.review}</div>;
+      } else {
+        display = (
+          <div>
+            <span>
+              {this.state.before}
+              ...
+            </span>
+            {' '}
+            <Button onClick={this.handleClick}>read more</Button>
+          </div>
+        );
+      }
+    } else {
+      display = <div>{this.props.review}</div>;
+    }
 
     return (
-   <div>
-      <Review >
-        <First>
-          <div>
-          <Img  src = {`${this.props.url}`} />
-          </div>
-          <Second>
-              {this.props.name} 
+      <div>
+        <Review>
+          <First>
+            <div>
+              <Img src={`${this.props.url}`} />
+            </div>
+            <Second>
+              {this.props.name}
               <Date>{this.props.date}</Date>
-          </Second>
-        </First> 
-         {display}
+            </Second>
+          </First>
+          {display}
         </Review>
-    </div>
-    )
-}
+      </div>
+    );
+  }
 }
 
 export default SingleReview;

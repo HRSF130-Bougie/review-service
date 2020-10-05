@@ -1,50 +1,45 @@
+/* eslint-disable import/extensions */
 /* eslint-disable react/prop-types */
 import React from 'react';
+import styled, { css } from 'styled-components';
 import SingleReview from './SingleReview.jsx';
-import styled , {css} from 'styled-components';
 
 const ListReview = (props) => {
-// eslint-disable-next-line react/destructuring-assignment
-console.log(props.values)
-  
   const mapped = props.values.map((one) => (
-  
-    <SingleReview className="singleReview" url={one.avatar}  review = {one.review}  name ={one.visitorName} date={one.col} />));
 
+    <SingleReview className="singleReview" url={one.avatar} review={one.review} name={one.visitorName} date={one.col} />));
 
-    
-    const Container =styled.section`
+  const Container = styled.section`
     display : grid;
     grid-template-columns: 1fr 1fr ;
     grid-template-rows: 1fr 1fr 1fr;
     grid-column-gap : 10%;
 
-    ${({correct}) => !correct && css`  
+    ${({ correct }) => !correct && css`  
      display : flex;
-    flex-direction: column ;
-    margin-left : 2%;
+     flex-direction: column ;
+     margin-left : 2%;
 
 
     `}
     `;
 
-
   return (
     <div>
-      {props.correct ?
-       <Container correct = {props.correct}>
-     {mapped[0]}
-     {mapped[1]}
-     {mapped[2]}
-     {mapped[3]}
-     {mapped[4]}
-     {mapped[5]}
+      {props.correct
+        ? (
+          <Container correct={props.correct}>
+            {mapped[0]}
+            {mapped[1]}
+            {mapped[2]}
+            {mapped[3]}
+            {mapped[4]}
+            {mapped[5]}
 
-     </Container>
-     :
-     <Container>{mapped}</Container> }
+          </Container>
+        )
+        : <Container>{mapped}</Container> }
     </div>
-    
 
   );
 };
