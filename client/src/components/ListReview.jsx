@@ -5,10 +5,8 @@ import styled, { css } from 'styled-components';
 import SingleReview from './SingleReview.jsx';
 
 const Container = styled.section`
-    display : grid;
-    grid-template-columns: 1fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-column-gap : 7%;
+    display : flex;
+    flex-direction: column ;
     height : 100%;
     
 
@@ -21,6 +19,16 @@ const Container = styled.section`
     `}
     `;
 
+const Wrapper = styled.div`
+    display : grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr;
+    grid-column-gap: 7%;
+
+
+    
+    `;
+ 
 const ListReview = (props) => {
   console.log("values" , props.values)
   const mapped = props.values.map((one) => (
@@ -32,12 +40,18 @@ const ListReview = (props) => {
       {props.correct
         ? (
           <Container correct={props.correct}>
+            <Wrapper>
             {mapped[0]}
             {mapped[1]}
+            </Wrapper>
+            <Wrapper>
             {mapped[2]}
             {mapped[3]}
+            </Wrapper>
+            <Wrapper>
             {mapped[4]}
             {mapped[5]}
+            </Wrapper>
 
           </Container>
         )

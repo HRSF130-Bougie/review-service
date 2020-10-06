@@ -6,7 +6,6 @@ const Review = styled.div`
 font-family:Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
 font-size:16px;
 font-weight:400;
-display : block;
 word-break:break-word;
 text-size-adjust:100%;
 line-height:24px;

@@ -24,6 +24,7 @@ const Star = styled.span`
       color : rgb(146, 23, 77);
       margin-right:8px;
     `;
+
 const Header = (props) => {
   let rate = '';
   let cleanliness = '';

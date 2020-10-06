@@ -6,6 +6,5 @@ describe('<App/>', () => {
   it('App has div', () => {
     const component = render(<App />);
     expect(component.find('div')).toBeDefined();
-    
   });
 });
