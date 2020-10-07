@@ -3,8 +3,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Review = styled.div`
-font-family:Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+font-family:'Airbnb Cereal App Light';
+color: rgb(34, 34, 34);
 font-size:16px;
+color: #222222;
 font-weight:400;
 word-break:break-word;
 text-size-adjust:100%;
@@ -16,13 +18,20 @@ margin-right: 8.33333%;
 
 const First = styled.div`
 display: flex !important;
+font-weight:600;
 align-items: center !important;
 margin-bottom: 16px !important;
+font-family :'Airbnb Cereal App Extra Bold';
+color: rgb(34, 34, 34);
+
 
 `;
 
 const Second = styled.div`
 margin-left: 12px !important;
+font-weight: 400 ;
+font-family :'Airbnb Cereal App Medium';
+
 
 `;
 
@@ -36,14 +45,15 @@ display : inline-block;
 
 const Date = styled.div`
 color: rgb(113, 113, 113) ;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif ;
+    font-family: 'Airbnb Cereal App Light';
     font-weight: 400 ;
     font-size: 14px ;
     line-height: 20px ;
    
 `;
 const Button = styled.span`
-font-weight: 600 !important;
+font-weight: 400 !important;
+font-family :'Airbnb Cereal App Medium';
 text-decoration: underline;
 : hover {
     cursor: pointer; 

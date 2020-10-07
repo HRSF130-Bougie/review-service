@@ -58,7 +58,7 @@ const Progress = styled.span`
 
 const RatingOne = styled.span`
   color: rgb(34, 34, 34) !important;
-  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-family: 'Airbnb Cereal App Light';
   font-weight: 600 !important;
   font-size: 12px !important;
   line-height: 16px !important;
@@ -67,7 +67,7 @@ const RatingOne = styled.span`
 
 const Font = styled.div`
   color: #222222 ;
-  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-family: 'Airbnb Cereal App Light';
   font-weight: 400 ;
   font-size: 16px ;
   line-height: 20px;

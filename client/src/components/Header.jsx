@@ -1,5 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 const Wrapper = styled.section`
   display:inline-flex;
@@ -22,7 +24,9 @@ const Wrapper = styled.section`
 
 const Star = styled.span`
       color : rgb(146, 23, 77);
+      font-size: 70%;
       margin-right:8px;
+  
     `;
 
 const Header = (props) => {
@@ -46,12 +50,10 @@ const Header = (props) => {
   rate = ((cleanliness + communication + checkIn + accuracy + location + value) / 6).toFixed(2);
   return (
     <Wrapper correct={props.correct}>
-      <Star>⭑</Star>
-      <span id="rate">{rate}</span>
+      <Star> <FontAwesomeIcon icon={faStar} /></Star>
+      <span id="rate">{`${rate}`}&nbsp;</span>
       <span>
-        (
-        {props.values.length}
-        reviews)
+       {`(${props.values.length} reviews)`}
       </span>
     </Wrapper>
   );

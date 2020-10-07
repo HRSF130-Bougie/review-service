@@ -6,6 +6,7 @@ import Rating from './Rating.jsx';
 import ListReview from './ListReview.jsx';
 import Header from './Header.jsx';
 import Button from './Button.jsx';
+import GlobalFonts from '../assets/fonts/GlobalFonts';
 
 const Body = styled.section`
 display : flex; 
@@ -15,7 +16,7 @@ justify-content: space-between;
 flex-direction:column ; 
 width : 1919px;
 hight : 912px;
-font-family :-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+font-family :'Airbnb Cereal App Book';
 font-size: 16px ;
 padding-top: 48px;
 padding-bottom: 48px;
@@ -50,10 +51,12 @@ class App extends React.Component {
   render() {
     return (
       <Body>
+        <GlobalFonts />
         <Header values={this.state.reviews} correct />
         <Rating values={this.state.reviews} correct />
         <ListReview values={this.state.reviews} correct />
         <Button reviews={this.state.reviews} />
+       
       </Body>
 
     );
