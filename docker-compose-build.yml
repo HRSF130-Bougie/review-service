@@ -1,0 +1,29 @@
+version: "3.7"
+
+services: 
+
+  app: 
+    build: .
+
+    ports:
+    - 3003:3003
+
+    depends_on:
+      - 'db'
+    restart: on-failure
+
+    environment: 
+      MYSQL_HOST: db
+      MYSQL_USER: root 
+      MYSQL_PASSWORD: Heno12345$$
+      MYSQL_DB: reviewService
+      
+    command: sh -c 'npm start'
+
+
+
+
+  db:
+    build: ./database
+    environment:
+      MYSQL_ROOT_PASSWORD: Heno12345$$

@@ -10,6 +10,7 @@ import GlobalFonts from '../assets/fonts/GlobalFonts';
 
 const Body = styled.section`
 display : flex; 
+zoom: 82%;
 max-width: 1120px;
 background-color: #fff;
 justify-content: space-between; 
