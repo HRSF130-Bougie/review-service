@@ -59,7 +59,7 @@ const DialogBox = styled.dialog`
     border-radius: 12px !important;
     border-width: 0px;
     position: relative;    
-    max-height: 100% !important;
+    max-height: 90vh !important;
     display: flex !important;
     flex-direction: column !important;
     box-shadow: rgba(0, 0, 0, 0.28) 0px 8px 28px !important;
@@ -126,7 +126,7 @@ const ReviewsSec = styled.div`
 const Squares = styled.div`
     position:fixed; 
     z-index: 2000 !important;
-    margin-top : 1180px;
+    margin-top : 900px;
     margin-left : 650px;
   `;
 

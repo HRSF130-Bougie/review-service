@@ -21,7 +21,7 @@ font-size: 16px ;
 padding-top: 48px;
 padding-bottom: 48px;
 margin-left: auto;
-margin-right: auto;
+margin-right: auto;built
 `;
 
 class App extends React.Component {
